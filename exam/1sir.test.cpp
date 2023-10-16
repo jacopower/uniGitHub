@@ -2,6 +2,7 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
+
 #include "1sir.hpp"
 
 TEST_CASE("Testing CheckInput()")
