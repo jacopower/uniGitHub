@@ -13,7 +13,6 @@ TEST_CASE("Testing CheckInput()")
     double I = 30;
     double beta = 0.7;
     double gamma = 0.4;
-    CheckInput(T, N, I, beta, gamma);
     CHECK_THROWS_AS(CheckInput(T, N, I, beta, gamma), std::invalid_argument);
   }
   SUBCASE("T is not an integer")
@@ -23,7 +22,6 @@ TEST_CASE("Testing CheckInput()")
     double I = 30;
     double beta = 0.7;
     double gamma = 0.4;
-    CheckInput(T, N, I, beta, gamma);
     CHECK_THROWS_AS(CheckInput(T, N, I, beta, gamma), std::invalid_argument);
   }
   SUBCASE("N is negative")
@@ -33,7 +31,6 @@ TEST_CASE("Testing CheckInput()")
     double I = 30;
     double beta = 0.7;
     double gamma = 0.4;
-    CheckInput(T, N, I, beta, gamma);
     CHECK_THROWS_AS(CheckInput(T, N, I, beta, gamma), std::invalid_argument);
   }
   SUBCASE("N is not an integer")
