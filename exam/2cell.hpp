@@ -3,14 +3,11 @@
 #ifndef CELL_HPP
 #define CELL_HPP
 
-#include <iostream>
 #include <vector>
 #include <random>
 #include <cassert>
+#include <iostream>
 #include <iomanip>
-#include <typeinfo>
-
-using grid_t = std::vector<std::vector<Cell>> ;
 
 enum class Cell : char { s, i, r } ;
 
@@ -20,12 +17,12 @@ class World {
     private:
       int L_0 ;         // grid side length 
       int S, I_0, R, V, Q , D;  // parameters that define the world in a specific day (Q=1 :quarantine on, =0 :off)
-      grid_t grid_0{} ; 
+      std::vector<std::vector<Cell>> grid_0{} ; 
 
     public:
-      World(int L, int I, grid_t initial_grid) ;   // initializes a word on day 0
+      World(int L, int I, std::vector<std::vector<Cell>> initial_grid) ;   // initializes a word on day 0
 
-      grid_t get_grid() ;   // separate functions or methods that show private info to the ones that modify private info, to prevent changing them unintentionally
+      std::vector<std::vector<Cell>> get_grid() ;   // separate functions or methods that show private info to the ones that modify private info, to prevent changing them unintentionally
 
       int get_L() ;    
 
@@ -50,7 +47,7 @@ class World {
       void day(double& beta, double const& gamma, bool vax, bool quarantine, bool v_start ) ;   // changes the parameters of a day to create the following one
 } ;
 
-std::vector<Point> position_s(int L, grid_t grid) ;    // contains the position of 's' cells
+std::vector<Point> position_s(int L, std::vector<std::vector<Cell>> grid) ;    // contains the position of 's' cells
 
 void CheckInput(double& T, double& L, double const& beta, double const& gamma,
                 double const& initial_infected) ;   // checks if user's imputs have valid arguments
