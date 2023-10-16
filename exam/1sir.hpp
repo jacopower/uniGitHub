@@ -3,14 +3,13 @@
 #ifndef SIR_HPP
 #define SIR_HPP
 
-#include <cassert>
-#include <cmath>
-#include <iomanip>
-#include <iostream>
-#include <stdexcept>
 #include <vector>
+#include <cmath>
+#include <cassert>
+#include <iostream>
+#include <iomanip>
 
-struct SIR  {   // allowes me to define the state of the infection in a specific day
+struct SIR  {   // allows me to define the state of the infection in a specific day
     double S ;   // public
     double I ;
     double R ;
@@ -18,7 +17,7 @@ struct SIR  {   // allowes me to define the state of the infection in a specific
     int V ;
   } ;
 
-class Pandemic  {   // allowes to create a SIR type object and define actions using it
+class Pandemic  {   // allows to create a SIR type object and define actions using it
       SIR SIR_0 ;  // private
 
     public:
