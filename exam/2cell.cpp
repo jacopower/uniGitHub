@@ -2,6 +2,8 @@
 
 #include "2cell.hpp"
 
+using grid_t = std::vector<std::vector<Cell>> ;
+
 World::World(int L, int I, grid_t initial_grid)  : L_0{L} ,
                                                                                   S{(L * L) - I} ,
                                                                                   I_0{I} ,
